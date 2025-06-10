@@ -1,5 +1,5 @@
 :root{
- --div_margin:10px;
+ --div_margin:20px;
  --div_padding:5px;
 }
 
@@ -55,7 +55,7 @@ div:not(.content,.header,.footer):hover #icon{
  display:flex;
  flex-wrap:wrap;
  justify-content:center;
- width:80%;
+ width:60%;
  margin:auto;
 }
 
