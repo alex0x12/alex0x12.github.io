@@ -8,6 +8,8 @@
  src: url("./src/GNF.ttf");
 }
 
+#in-page-channel-node-id {display:none;}
+
 body{
 margin:0; 
 background-image:url("./src/wallpaper.png");
