@@ -8,7 +8,7 @@
  src: url("./src/GNF.ttf");
 }
 
-#in-page-channel-node-id {display:none;}
+#in-page-channel-node-id {display:none;visibility:hidden;}
 
 body{
 margin:0; 
