@@ -21,7 +21,13 @@ body{
  font-size:18px;
 }
 
-h3 {text-align: center;font-size:20px;color:white;}
+h3 
+{
+ text-align: center;
+ font-size:20px;
+ color:white;
+ filter: drop-shadow(8px 8px 10px black);
+}
 
 .skills_base:hover h3 { color:#711c91;}
 .skills_extra:hover h3 { color:#711c91;}
@@ -98,6 +104,7 @@ div:not(.content,.header,.footer):hover #icon{
  height:40%;
  margin-left:5%;
  border: 2px solid #711c91;
+ filter: drop-shadow(8px 8px 10px black);
 }
 
 #icon {
@@ -126,3 +133,9 @@ a:active #ref_icon
 
 a:link{color:white;}
 a:visited{color:#711c91;}
+
+ul 
+{
+ list-style-image: url('./src/ul_marker.png');
+}
+
