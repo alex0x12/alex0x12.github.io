@@ -48,7 +48,7 @@ div:not(.content,.header,.footer):hover{
 }
 
 div:not(.content,.header,.footer):hover #icon{
- display:none;
+ filter: invert(100%);
 }
 
 .content
@@ -106,7 +106,23 @@ div:not(.content,.header,.footer):hover #icon{
  margin: 0 15px 0 0;
 }
 
+#ref_icon { 
+ width:18px;
+ border:0;
+ margin: 0 15px 0 0;
+}
+
+a:hover{font-size:20px;}
+a:hover #ref_icon
+{
+ width:20px;
+ filter:invert(100%);
+}
+a:active{font-size:22px;}
+a:active #ref_icon 
+{ 
+ width:22px; 
+}
+
 a:link{color:white;}
 a:visited{color:#711c91;}
-a:hover{font-size:20px;}
-a:active{font-size:22px;}
