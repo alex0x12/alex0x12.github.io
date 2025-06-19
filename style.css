@@ -130,15 +130,15 @@ div:not(.content,.header,.footer):hover #icon{
  border: 2px solid white;
  filter: drop-shadow(8px 8px 10px black);
  transition: transform 0.5s ease;
- transition: margin-left 0.5s ease;
+ transition: margin-left 1s ease;
 }
 
-.personal img:hover{
+.personal:hover img{
  transform: scale(1.2);
  border: 2px solid #711c91;
  margin-left: 10%;
  transition: transform 0.5s ease;
- transition: margin-left 0.5s ease;
+ transition: margin-left 1s ease;
 }
 
 #icon {
