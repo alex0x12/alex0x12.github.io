@@ -127,7 +127,7 @@ div:not(.content,.header,.footer):hover #icon{
  width:40%;
  height:40%;
  margin-left:5%;
- border: 2px solid #711c91;
+ border: 2px solid white;
  filter: drop-shadow(8px 8px 10px black);
  transition: transform 0.5s ease;
  transition: margin-left 0.5s ease;
