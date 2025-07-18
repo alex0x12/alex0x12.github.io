@@ -162,3 +162,8 @@ ul
  list-style-image: url('./src/ul_marker.png');
 }
 
+li:hover
+{
+ color:#711c91;
+ transition:color 0.5s ease;
+}
