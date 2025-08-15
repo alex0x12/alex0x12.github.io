@@ -31,13 +31,35 @@ h3
  color:white;
 }
 
-.skills_base:hover h3 { color:#711c91;transition:color 1.5s ease;}
-.skills_extra:hover h3 { color:#711c91;transition:color 1.5s ease;}
-.personal:hover h3 { color:#711c91;transition:color 1.5s ease;}
-.contacts:hover h3 { color:#711c91;transition:color 1.5s ease;}
-.portfolio:hover h3 { color:#711c91;transition:color 1.5s ease;}
-.education:hover h3 { color:#711c91;transition:color 1.5s ease;}
-.languages:hover h3 { color:#711c91;transition:color 1.5s ease;}
+.skills_base:hover h3,
+.skills_extra:hover h3,
+.personal:hover h3,
+.contacts:hover h3,
+.portfolio:hover h3,
+.education:hover h3, 
+.languages:hover h3 
+{ 
+	color:#711c91;
+	transition:color 1.5s ease;
+}
+
+.skills_base:hover #icon,
+.skills_extra:hover #icon
+{
+	animation: icon_spin 1s 1 ease-out;
+}
+
+@keyframes icon_spin
+{
+	from
+	{
+		transform:rotate(0deg);
+	}
+	to
+	{
+		transform:rotate(360deg);
+	}
+}
 
 div .wrapper {
 	width:410px;
