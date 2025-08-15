@@ -3,14 +3,10 @@
  --div_padding:5px;
 }
 
-@font-face {
- font-family: "gnf";
- src: url("./src/GNF.ttf");
-}
-
-@font-face {
- font-family: "pixeloid";
- src: url("./src/pixeloid.ttf");
+@font-face
+{
+ font-family: "martian";
+ src: url("./src/MartianMonoNerdFont-Medium.ttf");
 }
 
 #in-page-channel-node-id {display:none;visibility:hidden;}
@@ -22,14 +18,15 @@ body{
  background-attachment:fixed;
  background-color:#090909;
  overflow-x:hidden;
- font-family:gnf;
- font-size:18px;
+ font-family:martian;
+ font-size:14px;
+ color:rgba(0,0,0,0.8);
 }
 
 h3 
 {
  text-align: center;
- font-size:20px;
+ font-size:18px;
  filter: drop-shadow(8px 8px 10px black);
  color:white;
 }
@@ -42,7 +39,36 @@ h3
 .education:hover h3 { color:#711c91;transition:color 1.5s ease;}
 .languages:hover h3 { color:#711c91;transition:color 1.5s ease;}
 
-div:not(.content,.header,.footer) {
+div .wrapper {
+	width:410px;
+	height:410px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	transition:width 0.5s ease;
+	transition:height 0.5s ease;
+}
+
+.wrapper:has(*:hover) {
+	background-image: url('./src/crosshair.png');
+	background-repeat: no-repeat;
+	background-position:center;
+	animation: 0.5s ease-in-out infinite alternate wrapsize;
+}
+
+@keyframes wrapsize
+{
+	from
+	{
+		background-size:410px 410px;
+	}
+	to 
+	{
+		background-size: 400px 400px;
+	}
+}
+
+div:not(.content,.header,.footer,.wrapper) {
  background-color: #99ccff77;
  border-color: #711c91;
  border-style: solid; 
@@ -52,15 +78,12 @@ div:not(.content,.header,.footer) {
  margin: var(--div_margin);
 }
 
-div:not(.content,.header,.footer):hover{
+div:not(.content,.header,.footer,.wrapper):hover{
  transition:background-color 1s ease;
- transition:padding 0.5s ease;
  background-color: #99ccff;
- padding:0px;
- margin:calc(var(--div_margin) + var(--div_padding));
 }
 
-div:not(.content,.header,.footer):hover #icon{
+div:not(.content,.header,.footer,.wrapper):hover #icon{
  filter: invert(100%);
  transition:filter 1s ease;
 }
@@ -89,7 +112,7 @@ div:not(.content,.header,.footer):hover #icon{
 }
 
 .header h3 {
- font-family:pixeloid;
+ font-family:martian;
  font-size:30px;
  cursor:default;
  color:#711c91;
@@ -123,7 +146,7 @@ div:not(.content,.header,.footer):hover #icon{
  border: 2px solid #711c91;
 }
 
-.personal img{
+.personal img:not(#icon){
  width:40%;
  height:40%;
  margin-left:5%;
@@ -133,12 +156,12 @@ div:not(.content,.header,.footer):hover #icon{
  transition: margin-left 1s ease;
 }
 
-.personal:hover img{
+.personal:hover img:not(#icon){
  transform: scale(1.2);
  border: 2px solid #711c91;
- margin-left: 10%;
  transition: transform 0.5s ease;
- transition: margin-left 1s ease;
+ transition: margin-left 1s ease; 
+ margin-left: 10%;
 }
 
 #icon {
@@ -159,6 +182,8 @@ a:visited{color:#711c91;transition:color 1s ease;}
 
 ul 
 {
+ padding-top: 15px;
+ padding-left: 30px;
  list-style-image: url('./src/ul_marker.png');
 }
 
